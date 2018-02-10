@@ -1,0 +1,199 @@
+
+NAME=Aanathem
+
+OPTIONS=autodig
+OPTIONS=autoopen
+OPTIONS=!autopickup
+OPTIONS=boulder:0
+OPTIONS=cat:Arya
+OPTIONS=color
+OPTIONS=dark_room
+OPTIONS=dog:Bear
+OPTIONS=fruit:dragonfruit
+OPTIONS=horse:silver
+OPTIONS=hilite_pet
+OPTIONS=hilite_pile
+OPTIONS=!implicit_uncursed
+OPTIONS=lit_corridor
+OPTIONS=msg_window:reversed
+OPTIONS=number_pad:1
+OPTIONS=showexp
+OPTIONS=showscore
+OPTIONS=sortloot:full
+OPTIONS=!sparkle
+OPTIONS=suppress_alert:3.6.0
+OPTIONS=time
+OPTIONS=use_darkgray
+
+# GRAPHICS
+#OPTIONS=SYMSET:IBMgraphics
+OPTIONS=SYMSET:DECgraphics
+
+# STATUSES
+OPTIONS=HILITE_STATUS: hitpoints/30%/red/bright-green
+OPTIONS=HILITE_STATUS: hitpoints-max/updown/orange/green
+OPTIONS=HILITE_STATUS: power/33%/red/bright-cyan
+OPTIONS=HILITE_STATUS: power-max/updown/orange/green
+OPTIONS=HILITE_STATUS: strength/updown/orange/cyan
+OPTIONS=HILITE_STATUS: constitution/updown/orange/cyan
+OPTIONS=HILITE_STATUS: dexterity/updown/orange/cyan
+OPTIONS=HILITE_STATUS: wisdom/updown/orange/cyan
+OPTIONS=HILITE_STATUS: intelligence/updown/orange/cyan
+OPTIONS=HILITE_STATUS: charisma/updown/orange/cyan
+OPTIONS=HILITE_STATUS: armor-class/updown/orange/cyan
+OPTIONS=HILITE_STATUS: gold/updown/yellow/yellow
+
+# 3.4.3 Status Colors
+#OPTIONS=statuscolors
+#STATUSCOLOR=burdened:yellow,stressed:orange,strained:red&bold
+#STATUSCOLOR=overtaxed:red&inverse,overloaded:red&inverse&blink
+#STATUSCOLOR=satiated:yellow,hungry:orange,weak:red&bold
+#STATUSCOLOR=fainting:red&inverse,fainted:red&inverse&blink
+#STATUSCOLOR=hallu:yellow,conf:orange,stun:red&bold
+#STATUSCOLOR=ill:red&inverse,foodpois:red&inverse,slime:red&inverse
+#STATUSCOLOR=held:red&inverse,blind:orange&bold
+
+# MENU COLORS
+OPTIONS=menucolors
+
+# GOLD PIECES
+MENUCOLOR=" gold piece"=yellow
+
+# BEATITUDE
+MENUCOLOR=" named B$"=green
+MENUCOLOR=" named UC$"=cyan
+MENUCOLOR=" named C$"=red
+MENUCOLOR=" named NC$"=lightcyan
+
+MENUCOLOR=" blessed"=green
+MENUCOLOR=" uncursed"=cyan
+MENUCOLOR=" cursed"=red
+MENUCOLOR=" cursed .* (being worn)"=red&underline
+
+MENUCOLOR=" holy"=green
+MENUCOLOR=" unholy"=red
+
+# EQUIPPED
+MENUCOLOR=" worn"=cyan&inverse
+MENUCOLOR=" blessed .* worn"=green&inverse
+MENUCOLOR=" cursed .* worn"=red&inverse
+
+MENUCOLOR=" quiver"=cyan&inverse
+MENUCOLOR=" blessed .* quiver"=green&inverse
+MENUCOLOR=" cursed .* quiver"=red&inverse
+
+MENUCOLOR=" hand"=cyan&inverse
+MENUCOLOR=" blessed .* hand"=green&inverse
+MENUCOLOR=" cursed .* hand"=red&inverse
+
+MENUCOLOR=" \(wielded\)"=cyan&inverse
+MENUCOLOR=" blessed .* \(wielded\)"=green&inverse
+MENUCOLOR=" cursed .* \(wielded\)"=red&inverse
+
+MENUCOLOR=" named B .* worn"=green&inverse
+MENUCOLOR=" named B .* hand"=green&inverse
+
+# BAG BANE
+MENUCOLOR=" wand .* cancellation"=orange&underline
+MENUCOLOR=" bag .* tricks"=orange&underline
+MENUCOLOR=" called.*V!"=orange&underline
+
+# UNPAID
+MENUCOLOR="unpaid"=white&underline
+
+# SPECIFIC
+MENUCOLOR="wand .* wishing.*"=magenta
+MENUCOLOR="wand .* polymorph.*"=magenta
+MENUCOLOR=" worthless "=blue
+
+# FORCE
+MENUCOLOR="\{R\}"=red
+MENUCOLOR="\{B\}"=blue
+MENUCOLOR="\{C\}"=cyan
+MENUCOLOR="\{G\}"=green
+MENUCOLOR="\{Y\}"=yellow
+MENUCOLOR="\{[MP]\}"=magenta
+MENUCOLOR="\{O\}"=orange
+MENUCOLOR="\{W\}"=white
+MENUCOLOR="\{L\}"=black
+MENUCOLOR="\{y\}"=gray
+MENUCOLOR="\{g\}"=lightgreen
+MENUCOLOR="\{b\}"=lightblue
+MENUCOLOR="\{[mp]\}"=lightmagenta
+MENUCOLOR="\{c\}"=lightcyan
+MENUCOLOR="\{N\}"=none
+MENUCOLOR="\{X\}"=bold
+MENUCOLOR="\{x\}"=dim
+MENUCOLOR="\{U\}"=underline
+MENUCOLOR="\{I\}"=inverse
+MENUCOLOR="\{K\}"=blink
+
+# ENHANCE
+MENUCOLOR="\[Unskilled\]"=gray
+MENUCOLOR="\[Basic\]"=cyan
+MENUCOLOR="\[Skilled\]"=green
+MENUCOLOR="\[Expert\]"=magenta
+MENUCOLOR="\[Master\]"=magenta
+MENUCOLOR="\[Grand Master\]"=magenta
+
+# MSGTYPE
+#OPTIONS=msgtype_regex
+
+# hide
+MSGTYPE=hide "You displaced *"
+MSGTYPE=hide "Your armor is rather cumbersome..."
+#MSGTYPE=hide "Your knife named Puddingbane looks completely corroded."
+#MSGTYPE=hide "The black pudding turns to flee!"
+#MSGTYPE=hide "The black pudding divides as you hit it!"
+#MSGTYPE=hide "The massive hammer hits the black pudding."
+#MSGTYPE=hide "Your Mjollnir is not affected."
+
+# items on floor
+MSGTYPE=norep "You see here a *"
+MSGTYPE=norep "You see here an *"
+
+# death/status
+MSGTYPE=stop "You are slowing down."
+MSGTYPE=stop "You find it hard to breathe."
+MSGTYPE=stop "You are turning a little *"
+MSGTYPE=stop "The couatl swings itself around you!"
+MSGTYPE=stop "The electric eel swings itself around you!"
+MSGTYPE=stop "The giant eel swings itself around you!"
+MSGTYPE=stop "The kraken swings itself around you!"
+MSGTYPE=stop "The python grabs you!"
+MSGTYPE=stop "You feel more confident in your *skills."
+MSGTYPE=stop "You don't feel very well."
+MSGTYPE=stop "You are turning a little green."
+MSGTYPE=stop "Your limbs are getting oozy."
+MSGTYPE=stop "Your skin begins to peel away."
+MSGTYPE=stop "You are turning into a green slime."
+MSGTYPE=stop "You are turning into *."
+MSGTYPE=stop "You have become a green slime."
+MSGTYPE=stop "You have become *."
+MSGTYPE=stop "You are slowing down."
+MSGTYPE=stop "Your limbs are stiffening."
+MSGTYPE=stop "Your limbs have turned to stone."
+MSGTYPE=stop "You have turned to stone."
+MSGTYPE=stop "You are a statue."
+MSGTYPE=stop "You feel a strange vibration beneath *."
+MSGTYPE=stop "You feel a strange vibration under your *."
+MSGTYPE=stop "You feel feverish."
+MSGTYPE=stop "You feel purified."   
+MSGTYPE=stop "You feel hungry."
+MSGTYPE=stop "You are beginning to feel hungry."
+MSGTYPE=stop "You are getting the munchies."
+MSGTYPE=stop "You feel weak now."
+MSGTYPE=stop "You still have the munchies."
+MSGTYPE=stop "You feel weak."
+MSGTYPE=stop "You are beginning to feel weak."
+MSGTYPE=stop "The munchies are interfering with your motor capabilities."
+MSGTYPE=stop "You only feel hungry now."
+MSGTYPE=stop "You now have a lesser case of the munchies."
+MSGTYPE=stop "You faint from lack of food."
+MSGTYPE=stop "You regain consciousness."
+MSGTYPE=stop "You die from starvation."
+MSGTYPE=stop "You die from hunger and exhaustion."
+
+#vibrating square
+MSGTYPE=stop "You feel a strange vibration under your *."
+MSGTYPE=stop "You feel a strange vibration beneath you."
