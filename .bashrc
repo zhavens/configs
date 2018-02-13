@@ -1,5 +1,7 @@
 # ~/.bashrc: executed by bash(1) for non-login shells.
 
+export TERM=xterm-256color
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -32,7 +34,7 @@ esac
 # uncomment for a colored prompt, if the terminal has the capability; turned
 # off by default to not distract the user: the focus in a terminal window
 # should be on the output of commands, not on the prompt
-#force_color_prompt=yes
+force_color_prompt=yes
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
@@ -45,8 +47,11 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+bold=$(tput bold)
+norm=$(tput sgr0)
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}${bold}\[\033[38;5;37m\]\u@\h${norm}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
@@ -114,6 +119,7 @@ export PATH=$PATH:~/bin
 
 export HISTSIZE=500000
 export HISTFILESIZE=$HISTSIZE
+export HISTCONTROL=ignorespace
 
 # misc generic aliases
 alias reset_ssh_agent="rm -rfv /tmp/ssh*; pkill ssh-agent; eval \$(ssh-agent); tmux set-environment -g SSH_AUTH_SOCK \$SSH_AUTH_SOCK"

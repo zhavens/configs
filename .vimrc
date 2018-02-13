@@ -1,4 +1,3 @@
-
 " Enable modern Vim features not compatible with Vi spec.
 set nocompatible
 
@@ -27,16 +26,26 @@ map <C-k> <PageUp>
 map <C-S-Up> ddkkp
 map <C-S-Down> ddp
 
+let mapleader = ','
+
 set colorcolumn=81
 highlight ColorColumn ctermbg=darkgrey guibg=darkgrey
 
+" Automatically strip whitespace from source files
+autocmd FileType c,h,cpp,java,py autocmd BufWritePre <buffer> %s/\s\+$//e
+
 " vim-plug plugin manager
-"  ~/.vim/autoload/plug.vim --create-dirs \
+"  curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+" Reload Vim:
+"  :PlugInstall
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 
 Plug 'scrooloose/nerdcommenter'
+let g:NERDSpaceDelims = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDTrimTrailingWhitespace = 1
 
 " Initialize plugin system
 call plug#end()

@@ -1,0 +1,8 @@
+# To fix keyboard issues:
+sudo dpkg-reconfigure keyboard-configuration
+
+# To boot into command line and start sshd by default, use raspi-config.
+sudo raspi-config
+
+# To change the default password
+passwd pi
