@@ -51,10 +51,12 @@ bold=$(tput bold)
 norm=$(tput sgr0)
 
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}${bold}\[\033[38;5;37m\]\u@\h${norm}\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    PS1='${debian_chroot:+($debian_chroot)}\[\e[01;38;5;37m\]\u\[\e[01;38;5;37m\]@\[\e[01;38;5;37m\]\h\[\e[0m\]:\[\e[01;34m\]\w\[\e[0m\]$\[\e[0m\] '
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
 fi
+
+
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
